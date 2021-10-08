@@ -1,3 +1,6 @@
+-- Copyright (C) 2021 jerryk <jerrykuku@qq.com>
+-- This is free software, licensed under the APACHE LICENSE, VERSION 2.0.
+
 module("luci.controller.go-aliyundrive-webdav", package.seeall)
 
 function index()
