@@ -1,4 +1,19 @@
 # luci-app-go-aliyundrive-webdav
+<div align="center">
+<a href="/LICENSE.txt">
+    <img src="https://img.shields.io/github/license/jerrykuku/luci-app-go-aliyundrive-webdav?style=flat-square" alt="">
+  </a><a href="https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/pulls">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="">
+  </a><a href="hhttps://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/issues/new">
+    <img src="https://img.shields.io/badge/Issues-welcome-brightgreen.svg?style=flat-square">
+  </a><a href="https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/releases">
+    <img src="https://img.shields.io/github/v/release/jerrykuku/luci-app-go-aliyundrive-webdav.svg?style=flat-square">
+  </a><a href="hhttps://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/releases">
+    <img src="https://img.shields.io/github/downloads/jerrykuku/luci-app-go-aliyundrive-webdav/total?style=flat-square">
+  </a><a href="https://t.me/jerryk6">
+    <img src="https://img.shields.io/badge/Contact-telegram-blue?style=flat-square">
+  </a>  
+</div>
 
 # 介绍
 本项目是go-aliyun-webdav 的Luci 控制面板。  
