@@ -5,34 +5,47 @@
 local uci = luci.model.uci.cursor()
 local m, e
 
-m = Map("go-aliyundrive-webdav", translate("Go AliyunDrive WebDAV"),
-        translate("<a href=\"https://github.com/LinkLeong/go-aliyun-webdav\" target=\"_blank\">Project GitHub URL</a>"))
+m = Map("go-aliyundrive-webdav")
+m.title = translate("Go AliyunDrive WebDAV")
 
-m:section(SimpleSection).template = "go-aliyundrive-webdav/status"
+m.description = translate(translate("<a href=\"https://github.com/LinkLeong/go-aliyun-webdav\" target=\"_blank\">Project GitHub URL</a>"))
 
-e = m:section(TypedSection, "server")
+m:section(SimpleSection).template = "go-aliyundrive-webdav/go-aliyundrive-webdav_status"
+
+e = m:section(TypedSection, "go-aliyundrive-webdav")
 e.anonymous = true
 
-enable = e:option(Flag, "enable", translate("Enable"))
+enable = e:option(Flag, "enabled", translate("Enabled"))
 enable.rmempty = false
 
-refresh_token = e:option(Value, "refresh_token", translate("Refresh Token"),
-        translate("<a href=\"https://github.com/LinkLeong/go-aliyun-webdav#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96refreshtoken%E6%96%B9%E5%BC%8F\" target=\"_blank\">How to get refresh token</a>"))
+rt_token = e:option(Value, "rt", translate("Refresh Token"))
+rt_token.description = translate("<a href=\"https://github.com/LinkLeong/go-aliyun-webdav#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96refreshtoken%E6%96%B9%E5%BC%8F\" target=\"_blank\">How to get refresh token</a>")
 
 port = e:option(Value, "port", translate("Port"))
 port.default = "8085"
 port.datatype = "port"
 
-auth_user = e:option(Value, "auth_user", translate("Username"))
-auth_user.default = "admin"
+path = e:option(Value, "path", translate("Mounting directory"))
+path.description = translate("Access aliyundrive directory, defaults /.")
+path.default = "/"
 
-auth_pwd = e:option(Value, "auth_pwd", translate("Password"))
-auth_pwd.password = true
-auth_pwd.default = "123456"
+user = e:option(Value, "user", translate("Username"))
+user.default = "admin"
+
+pwd = e:option(Value, "pwd", translate("Password"))
+pwd.password = true
+pwd.default = "123456"
+
+verbose = e:option(Flag, "verbose", translate("Enable detailed logging"))
+verbose.default = "0"
+verbose.rmempty = false
+verbose.optional = false
 
 
 local e = luci.http.formvalue("cbi.apply")
 if e then
     io.popen("/etc/init.d/go-aliyundrive-webdav restart")
 end
+
+
 return m

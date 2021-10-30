@@ -7,7 +7,7 @@ msgstr "Go 阿里云盘"
 msgid "Go AliyunDrive WebDAV"
 msgstr "Go 阿里云盘 WebDAV"
 
-msgid "Enable"
+msgid "Enabled"
 msgstr "启用"
 
 msgid "Refresh Token"
@@ -15,6 +15,12 @@ msgstr "Refresh Token"
 
 msgid "Port"
 msgstr "监听端口"
+
+msgid "Mounting directory"
+msgstr "挂载目录"
+
+msgid "Access aliyundrive directory, defaults /."
+msgstr "访问 aliyundrive 目录，默认为 / 。"
 
 msgid "Username"
 msgstr "用户名"
@@ -34,9 +40,13 @@ msgstr "未运行"
 msgid "Settings"
 msgstr "设置"
 
+msgid "Enable detailed logging"
+msgstr "启用详细日志记录"
+
 msgid "<a href=\"https://github.com/LinkLeong/go-aliyun-webdav\" target=\"_blank\">Project GitHub URL</a>"
 msgstr "<a href=\"https://github.com/LinkLeong/go-aliyun-webdav\" target=\"_blank\">GitHub 项目地址</a>"
 
 msgid "<a href=\"https://github.com/LinkLeong/go-aliyun-webdav#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96refreshtoken%E6%96%B9%E5%BC%8F\" target=\"_blank\">How to get refresh token</a>"
-msgstr "<a href=\"https://github.com/LinkLeong/go-aliyun-webdav#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96refreshtoken%E6%96%B9%E5%BC%8F\" target=\"_blank\">如何获取token</a>"
+msgstr "<a href=\"https://github.com/LinkLeong/go-aliyun-webdav#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%8E%B7%E5%8F%96refreshtoken%E6%96%B9%E5%BC%8F\" target=\"_blank\">查看获取 refresh token 的方法</a>"
+
 

@@ -24,9 +24,9 @@
 ```
 cd lede/package/lean/  
 
-git clone https://github.com/jerrykuku/go-aliyundrive-webdav.git #主程序
+svn co https://github.com/immortalwrt/packages/trunk/net/go-aliyundrive-webdav #主程序
 
-git clone https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav.git  
+git clone https://github.com/zxlhhyccc/luci-app-go-aliyundrive-webdav.git  
 
 make menuconfig
 
