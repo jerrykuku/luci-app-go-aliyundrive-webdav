@@ -7,8 +7,7 @@ local m, e
 
 m = Map("go-aliyundrive-webdav")
 m.title = translate("Go AliyunDrive WebDAV")
-
-m.description = translate(translate("<a href=\"https://github.com/LinkLeong/go-aliyun-webdav\" target=\"_blank\">Project GitHub URL</a>"))
+m.description = translate("<a href=\"https://github.com/LinkLeong/go-aliyun-webdav\" target=\"_blank\">Project GitHub URL</a>")
 
 m:section(SimpleSection).template = "go-aliyundrive-webdav/go-aliyundrive-webdav_status"
 
@@ -44,8 +43,7 @@ verbose.optional = false
 
 local e = luci.http.formvalue("cbi.apply")
 if e then
-    io.popen("/etc/init.d/go-aliyundrive-webdav restart")
+	io.popen("/etc/init.d/go-aliyundrive-webdav restart")
 end
-
 
 return m

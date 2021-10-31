@@ -16,17 +16,19 @@
 </div>
 
 # 介绍
-本项目是go-aliyun-webdav 的Luci 控制面板。  
-[项目链接](https://github.com/LinkLeong/go-aliyun-webdav)
+本项目是 [go-aliyun-webdav](https://github.com/LinkLeong/go-aliyun-webdav) 的Luci 控制面板。  
+
+由 2021.10.31 收录于 [Lean openwrt](https://github.com/coolsnowwolf/lede) 源码中。
+
 
 ### 如何编译
 假设你的Lean openwrt（最新版本19.07） 在 lede 目录下
 ```
 cd lede/package/lean/  
 
-svn co https://github.com/immortalwrt/packages/trunk/net/go-aliyundrive-webdav #主程序
+git clone https://github.com/jerrykuku/go-aliyundrive-webdav.git #主程序
 
-git clone https://github.com/zxlhhyccc/luci-app-go-aliyundrive-webdav.git  
+git clone https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav.git  
 
 make menuconfig
 
