@@ -7,9 +7,9 @@ function index()
 	if not nixio.fs.access("/etc/config/go-aliyundrive-webdav") then
 		return
 	end
-	entry({"admin", "services", "go-aliyundrive-webdav"}, alias("admin", "services", "go-aliyundrive-webdav", "client"),_("Go AliyunDrive WebDAV"), 10).dependent = true  -- 首页
-	entry({"admin", "services", "go-aliyundrive-webdav", "client"}, cbi("go-aliyundrive-webdav/client"),_("Settings"), 10).leaf = true  -- 客户端配置
-	entry({"admin", "services", "go-aliyundrive-webdav", "log"}, cbi("go-aliyundrive-webdav/log"),_("Log"), 30).leaf = true -- 日志页面
+	entry({"admin", "services", "go-aliyundrive-webdav"}, alias("admin", "services", "go-aliyundrive-webdav", "client"), _("Go AliyunDrive WebDAV"), 10).dependent = true  -- 首页
+	entry({"admin", "services", "go-aliyundrive-webdav", "client"}, cbi("go-aliyundrive-webdav/client"), _("Settings"), 1).leaf = true  -- 客户端配置
+	entry({"admin", "services", "go-aliyundrive-webdav", "log"}, cbi("go-aliyundrive-webdav/log"), _("Log"), 2).leaf = true -- 日志页面
 
 	entry({"admin", "services", "go-aliyundrive-webdav", "status"}, call("action_status")).leaf = true
 	entry({"admin", "services", "go-aliyundrive-webdav", "logtail"}, call("action_logtail")).leaf = true
